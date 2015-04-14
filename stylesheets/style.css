@@ -19,6 +19,7 @@ header {
 header h1 {
   float: left;
   width: 570px;
+  color: red;
 }
 
 header nav {
