@@ -9,7 +9,6 @@ header, main, footer {
 header .container, main .container, footer .container {
   max-width: 855px;
   margin: auto;
-  color: green;
 }
 
 header {
