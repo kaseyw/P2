@@ -9,6 +9,7 @@ header, main, footer {
 header .container, main .container, footer .container {
   max-width: 855px;
   margin: auto;
+  color: green;
 }
 
 header {
@@ -19,7 +20,6 @@ header {
 header h1 {
   float: left;
   width: 570px;
-  color: red;
 }
 
 header nav {
