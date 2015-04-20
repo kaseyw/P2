@@ -2,49 +2,46 @@
 
 //req 4-A
 
-var isArmstrong = function(num){
-	"use strict"
+var  isArmstrong = function(n){
+	"use script";
+//convert to string
+	n= String(n);
+//transverse n
+		sum = 0;
+	for(var i = 0; i<n.length; i++)
+		sum = sum + Math.pow(n[i],n.length);
 
-	var s = String(num);
 
-	var d1 = s[0];
-	var d2 = s[1];
-	var d3 = s[2];
-	var d4 = s[3];
-	var d5 = s[4];
+if(n == sum)
+	return true;
 
-	if (Math.pow(d1,num.length) + Math.pow(d2,num.length) + Math.pow(d3,num.length) + Math.pow(d4,num.length) + Math.pow(d5,3) == num) 
+else
+	return false;
 
-		return true;
-
-	else
-		return false;
-	
-};
+}
 
 //must TEST the armstrong property!!
 
-//req 1-C
+//req 4-B
 
-var isArmstrong = function(num){
-	"use strict"
+var  isArmstrong = function(n){
+	"use script";
+//convert to string
+	n= String(n);
+//transverse n
+		sum = 0;
+	for(var i = 0; i<n.length; i++)
+		sum = sum + Math.pow(n[i],n.length);
 
-	var s = String(num);
 
-	var d1 = s[0];
-	var d2 = s[1];
-	var d3 = s[2];
+if(n == sum)
+	return true;
 
-	if (Math.pow(d1,3) + Math.pow(d2,3) + Math.pow(d3,3) == num) 
+else
+	return false;
 
-		return true;
+}
 
-	else
-
-		return false;
-	
-};
- 
 var allArmstrongs = function(){
 	"use strict"
 
@@ -61,15 +58,68 @@ var allArmstrongs = function(){
 }
 
 
-//req 1-D
 
-var formatTelNum = function(x) {
-	var result = '(';
 
-	x= String(x);
+//req 4-C
 
-	result = result + x[0] + x[1] + x[2] + ") " + x[3] + x[4] + x[5] + '-' + x[6] + x[7] + x[8] + x[9];
+var allSubstrings1= function(s){
+	"use strict"
+	var result = "";
+var newresult="";
+	for(i=0;i<=mystring.length;i++){
+for(j=i+1;j<=mystring.length;j++){
+sub=mystring.substring(i,j);
 
+	result = result + sub + ", ";
+
+}
+}
+
+	for(i=0;i<result.length-2;i++){
+		newresult=newresult+ result[i];
+	}
+	return newresult;
+
+}
+
+
+
+//req 4-D
+
+
+var allSubstrings2= function(s){
+	"use strict"
+	var result =[];
+	for(i=0;i<=mystring.length;i++){
+for(j=i+1;j<=mystring.length;j++){
+sub=mystring.substring(i,j);
+
+	result.push(sub) ;
+
+}
+}
 
 	return result;
+
 }
+
+
+
+
+//req 4-E
+function maxWord(mystring){
+var maxword="";
+var maxLength=0;
+mystring=mystring.split(" ");
+for(i=0;i<mystring.length;i++){
+if(mystring[i].length>maxLength){
+maxword=mystring[i];
+maxLength=mystring[i].length;
+console.log("the longest word so far is: " + maxword + " It has length " + maxLength)
+}
+}
+return maxword;}
+
+
+
+
